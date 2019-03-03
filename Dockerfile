@@ -64,7 +64,6 @@ RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
     && mkdir -p /home/chrome/Downloads && chown -R chrome:chrome /home/chrome
 
 #COPY local.conf /etc/fonts/local.conf
-COPY fonts.conf /etc/fonts/fonts.conf
 
 # Run Chrome as non privileged user
 USER chrome
