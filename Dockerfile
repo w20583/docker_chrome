@@ -20,7 +20,7 @@
 
 # Base docker image
 #FROM debian:sid-slim
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 LABEL maintainer "Jessie Frazelle <jess@linux.com>"
 
