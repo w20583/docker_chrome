@@ -59,14 +59,14 @@ RUN set -x \
 	&& rm -rf /tmp/*.deb \
 	&& apt-get purge -y --auto-remove curl
 
-# Add chrome user
-RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
-    && mkdir -p /home/chrome/Downloads && chown -R chrome:chrome /home/chrome
+# Add chrome user "wj"
+RUN groupadd -r wj && useradd -r -g wj -G audio,video wj \
+    && mkdir -p /home/wj/Downloads && chown -R wj:wj /home/wj
 
 #COPY local.conf /etc/fonts/local.conf
 
-# Run Chrome as non privileged user
-USER chrome
+# Run Chrome as non privileged user wj
+USER wj
 
 # Autorun chrome
 ENTRYPOINT [ "google-chrome" ]
